@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="toss('Heads')">Heads</button>
+    <button onclick="toss('Tails')">Tails</button>
+
+
+    <script>
+
+        let score={
+            wins:0,
+            losses:0
+        };
+        function toss(Guess){
+            let num = Math.random();
+            let result='';
+            if(num>0.5){
+                result=('Heads');
+            }
+            else{
+                result=('Tails');
+            }
+            if(Guess===result){
+                console.log('You Win!');
+                score.wins++;
+            }else{
+                console.log('You Lose.');
+                score.losses++;
+            }
+            console.log(score);
+        }
+    </script>
+</body>
+</html>
